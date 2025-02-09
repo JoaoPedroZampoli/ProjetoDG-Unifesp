@@ -261,7 +261,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      playstation_button_options_outline_0: -4233054064768306220
+      playstation_button_options_outline_1: -3139042022086017233
+      playstation_button_options_outline_2: 206911920441645518
+      playstation_button_options_outline_3: 70816593600878272
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

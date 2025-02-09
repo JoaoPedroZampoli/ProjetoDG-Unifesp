@@ -261,7 +261,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      playstation_button_mute_0: 5529695821617142493
+      playstation_button_mute_1: 8869681514783316316
+      playstation_button_mute_2: 4525396898139724529
+      playstation_button_mute_3: 7514961597166691869
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

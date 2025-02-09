@@ -261,7 +261,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      playstation_button_mute_outline_0: 6047251951517161139
+      playstation_button_mute_outline_1: -503258403354253957
+      playstation_button_mute_outline_2: -8076340335128517193
+      playstation_button_mute_outline_3: -4789815807736677547
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
