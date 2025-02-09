@@ -1,0 +1,6 @@
+.header {
+    -unity-text-align: upper-center;
+    font-size: 120px;
+    -unity-font-definition: url("project://database/Assets/TextMesh%20Pro/Aloha.otf?fileID=12800000&guid=8fb48aff399880c4e8175c918cafe838&type=3#Aloha");
+    -unity-font-style: normal;
+}
