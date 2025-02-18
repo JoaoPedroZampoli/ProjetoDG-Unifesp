@@ -6,9 +6,8 @@ using UnityEngine.UIElements;
 public class MainMenuEvents : MonoBehaviour
 {
     private UIDocument _document;
-
     private Button _button;
-
+    private VisualElement _firstMenuScreen;
     private bool keyPressed = false;
 
     private void Awake()
@@ -16,18 +15,18 @@ public class MainMenuEvents : MonoBehaviour
         _document = GetComponent<UIDocument>();
 
         _button = _document.rootVisualElement.Q("PressAnyButton") as Button;
-        _firstMenuScreen = _document.rootVisualElement.Q("")
+        _firstMenuScreen = _document.rootVisualElement.Q("");
         _button.RegisterCallback<KeyDownEvent>(OnPressAnywhereButton);
     }
 
     private void OnPressAnywhereButton(KeyDownEvent evt)
     {
-        //Debug.Log("Você pressionou o botão!");
+        //Debug.Log("VocÃª pressionou o botÃ£o!");
     }
 
-    private void OnStartGameButton(ClickEvent evt)
+    private void OnStartGameButton()
     {
-        Debug.Log("Você clicou o botão de Começar o Jogo");
+        Debug.Log("VocÃª clicou o botÃ£o de ComeÃ§ar o Jogo");
     }
 
     private void Update()
@@ -36,10 +35,6 @@ public class MainMenuEvents : MonoBehaviour
         {
             keyPressed = true;
             Debug.Log("Tecla pressionada");
-        }
-        else
-        {
-
         }
     }
 }

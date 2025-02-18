@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -6,11 +7,16 @@ public class PlayerController : MonoBehaviour
     private Animator    _playerAnimator;
     public  float       _playerSpeed;
     private Vector2     _playerDirection;
+
+    // novo (18/02)
+    private CapsuleCollider2D CapsuleCollider;
+    private RaycastHit2D hit;
     
     void Start()
     {
         _playerRigidbody2D = GetComponent<Rigidbody2D>();
         _playerAnimator = GetComponent<Animator>();
+        CapsuleCollider = GetComponent<CapsuleCollider2D>();
     }
 
     void Update()
@@ -36,6 +42,19 @@ public class PlayerController : MonoBehaviour
             _playerAnimator.SetInteger("Movimento", 0);
         }
         // if ataque verdadeiro, movimento = 2
+
+        // novo (18/02)
+        hit = Physics2D.BoxCast(transform.position, CapsuleCollider.size, 0, new Vector2(0, _playerDirection.y), Mathf.Abs(_playerDirection.y * Time.deltaTime), LayerMask.GetMask("Personagem","Blocking"));
+        if (hit.collider == null)
+        {
+            MovePlayer();
+        }
+
+        hit = Physics2D.BoxCast(transform.position, CapsuleCollider.size, 0, new Vector2(_playerDirection.x, 0), Mathf.Abs(_playerDirection.x * Time.deltaTime), LayerMask.GetMask("Personagem","Blocking"));
+        if (hit.collider == null)
+        {
+            MovePlayer();
+        }
     }
 
     void MovePlayer()
