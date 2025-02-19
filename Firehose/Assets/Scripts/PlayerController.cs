@@ -11,12 +11,16 @@ public class PlayerController : MonoBehaviour
     // novo (18/02)
     private CapsuleCollider2D CapsuleCollider;
     private RaycastHit2D hit;
+
+    public DirecaoMovimento direcaoMovimento;
     
     void Start()
     {
         _playerRigidbody2D = GetComponent<Rigidbody2D>();
         _playerAnimator = GetComponent<Animator>();
         CapsuleCollider = GetComponent<CapsuleCollider2D>();
+
+        this.direcaoMovimento = DirecaoMovimento.Direita;
     }
 
     void Update()
@@ -27,6 +31,15 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         _playerDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+        if(_playerDirection.x > 0)
+        {
+            this.direcaoMovimento = DirecaoMovimento.Direita;
+        }
+        else if(_playerDirection.x < 0)
+        {
+            this.direcaoMovimento = DirecaoMovimento.Esquerda;
+        }
 
         if(_playerDirection.sqrMagnitude > 0.1)
         {

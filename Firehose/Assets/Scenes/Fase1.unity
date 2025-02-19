@@ -8294,6 +8294,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1175614133
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1175614134}
+  m_Layer: 9
+  m_Name: PontoAtaqueDireita
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1175614134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175614133}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.13, y: -0.38, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1883184774}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1214792270
 GameObject:
   m_ObjectHideFlags: 0
@@ -9131,11 +9162,12 @@ GameObject:
   - component: {fileID: 1563299454}
   - component: {fileID: 1563299453}
   - component: {fileID: 1563299452}
-  - component: {fileID: 1563299456}
   - component: {fileID: 1563299455}
   - component: {fileID: 1563299457}
   - component: {fileID: 1563299458}
-  m_Layer: 9
+  - component: {fileID: 1563299460}
+  - component: {fileID: 1563299459}
+  m_Layer: 6
   m_Name: Mosquinha
   m_TagString: Mosquinha
   m_Icon: {fileID: 0}
@@ -9262,8 +9294,48 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &1563299456
-CapsuleCollider2D:
+--- !u!114 &1563299457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563299451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4602be29b5523d41877351490576775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveSpeedMosquinha: 3
+  _detectionArea: {fileID: 589430699}
+--- !u!114 &1563299458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563299451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5b09d1cb8bd2cc46b2732d477ee8dcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heart: {fileID: 1883184776}
+--- !u!114 &1563299459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563299451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e361f9b74fe404b47ac0284290779d7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidas: 3
+--- !u!58 &1563299460
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -9296,36 +9368,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.012942314, y: -0.18}
-  m_Size: {x: 0.7323246, y: 0.7323246}
-  m_Direction: 0
---- !u!114 &1563299457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1563299451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4602be29b5523d41877351490576775, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _moveSpeedMosquinha: 3
-  _detectionArea: {fileID: 589430699}
---- !u!114 &1563299458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1563299451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5b09d1cb8bd2cc46b2732d477ee8dcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heart: {fileID: 1883184776}
+  m_Offset: {x: 0.00617218, y: -0.12}
+  m_Radius: 0.76
 --- !u!1 &1600781998
 GameObject:
   m_ObjectHideFlags: 0
@@ -9401,6 +9445,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600781998}
   m_CullTransparentMesh: 1
+--- !u!1 &1687751144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1687751145}
+  m_Layer: 9
+  m_Name: PontoAtaqueEsquerda
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1687751145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687751144}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.2, y: -0.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1883184774}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1827766745
 GameObject:
   m_ObjectHideFlags: 0
@@ -9483,6 +9558,7 @@ GameObject:
   - component: {fileID: 1883184770}
   - component: {fileID: 1883184775}
   - component: {fileID: 1883184776}
+  - component: {fileID: 1883184777}
   m_Layer: 9
   m_Name: Kerana
   m_TagString: Player
@@ -9503,6 +9579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerSpeed: 5
+  direcaoMovimento: 0
 --- !u!70 &1883184771
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -9634,7 +9711,9 @@ Transform:
   m_LocalPosition: {x: -1.55, y: -1.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1175614134}
+  - {fileID: 1687751145}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1883184775
@@ -9681,6 +9760,25 @@ MonoBehaviour:
   - {fileID: 2006573483}
   cheio: {fileID: -205270267638800340, guid: bad3beaebd7dc85418a37b2aa8cf499c, type: 3}
   vazio: {fileID: -7443756053782179069, guid: 45106b9e86626be4a8922ed3029342cf, type: 3}
+--- !u!114 &1883184777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883184769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a3fbb0b0a7ccda4cbc4ca422c64e7e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pontoAtaqueDireita: {fileID: 1175614134}
+  pontoAtaqueEsquerda: {fileID: 1687751145}
+  raioAtaque: 0.8
+  layersAtaque:
+    serializedVersion: 2
+    m_Bits: 64
+  player: {fileID: 1883184770}
 --- !u!1 &1939517031
 GameObject:
   m_ObjectHideFlags: 0
