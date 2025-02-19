@@ -51,5 +51,8 @@ TagManager:
   - name: Construcoes
     uniqueID: 2254117313
     locked: 0
+  - name: UI
+    uniqueID: 3285414077
+    locked: 0
   m_RenderingLayers:
   - Default

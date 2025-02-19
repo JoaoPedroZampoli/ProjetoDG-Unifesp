@@ -59,6 +59,6 @@ public class PlayerController : MonoBehaviour
 
     void MovePlayer()
     {
-        _playerRigidbody2D.MovePosition(_playerRigidbody2D.position + _playerDirection * _playerSpeed * Time.fixedDeltaTime);
+        _playerRigidbody2D.MovePosition(_playerRigidbody2D.position + _playerDirection.normalized * _playerSpeed * Time.fixedDeltaTime);  
     }
 }
