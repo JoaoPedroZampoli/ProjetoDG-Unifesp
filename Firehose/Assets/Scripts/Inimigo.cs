@@ -8,6 +8,8 @@ public class Inimigo : MonoBehaviour
     [SerializeField]
     private Animator animator;
 
+    private System.Action onDeathCallback;
+
     public void ReceberDano()
     {
         this.vidas--;
@@ -17,11 +19,17 @@ public class Inimigo : MonoBehaviour
             //Derrotado
             this.animator.SetBool("Morte", true);
             GameObject.Destroy(this.gameObject, 0.6f);
+            onDeathCallback?.Invoke();
         }
         else
         {
             //Recebeu dano
             this.animator.SetTrigger("Dano");
         }
+    }
+
+    public void SetOnDeathCallback(System.Action callback)
+    {
+        onDeathCallback = callback;
     }
 }
