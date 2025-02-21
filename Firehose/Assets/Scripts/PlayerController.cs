@@ -40,11 +40,10 @@ public class PlayerController : MonoBehaviour
         {
             this.direcaoMovimento = DirecaoMovimento.Esquerda;
         }
-
+    
         if(_playerDirection.sqrMagnitude > 0.1)
         {
             MovePlayer();
-
             _playerAnimator.SetFloat("AxisX", _playerDirection.x);
             _playerAnimator.SetFloat("AxisY", _playerDirection.y);
 
