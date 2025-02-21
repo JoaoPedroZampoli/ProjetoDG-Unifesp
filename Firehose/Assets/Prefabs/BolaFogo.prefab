@@ -137,4 +137,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7219906f89e65f438763eaf8fde2365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadeFogo: 5
+  velocidadeFogo: 6
