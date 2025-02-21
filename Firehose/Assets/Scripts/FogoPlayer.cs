@@ -17,7 +17,6 @@ public class FogoPlayer : MonoBehaviour
     }
     private void MovimentarFogo()
     {
-        AudioController.current.PlayMusic(AudioController.current.fogo);
         transform.Translate(Vector3.right * velocidadeFogo * Time.deltaTime);
         Destroy(gameObject, 1.0f);
     }

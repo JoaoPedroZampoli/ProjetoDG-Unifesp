@@ -10,8 +10,6 @@ public class HeartSystem : MonoBehaviour
     public Sprite cheio;
     public Sprite vazio;
 
-    public string scene;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -55,10 +53,8 @@ public class HeartSystem : MonoBehaviour
     {
         if(vida <= 0)
         {
-            //GetComponent<PlayerController>().enabled = false;
-            //Destroy(gameObject, 1.0f);
-            vida = vidaMaxima;
-            UnityEngine.SceneManagement.SceneManager.LoadScene(scene);
+            GetComponent<PlayerController>().enabled = false;
+            Destroy(gameObject, 1.0f);
         }
     }
 }

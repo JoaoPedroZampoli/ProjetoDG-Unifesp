@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1355449319642480814}
   - component: {fileID: 947286711411478520}
   - component: {fileID: 5814065243820216195}
-  - component: {fileID: -6848749581787188122}
+  - component: {fileID: 5826380177498959562}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
@@ -135,7 +135,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 6.302096, y: 2.7488632}
   m_EdgeRadius: 0
---- !u!114 &-6848749581787188122
+--- !u!114 &5826380177498959562
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,4 +162,4 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   scenes:
-  - Fase_2
+  - Fase3_1
