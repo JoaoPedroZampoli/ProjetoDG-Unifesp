@@ -8274,7 +8274,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8655,8 +8655,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9adf58e5ee33bbc428f7c4f5d33e4a39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidas: 7
-  vidaMax: 15
+  vidas: 20
+  vidaMax: 20
   velocidadeClaudio: 3
   DomClaudioFogo: {fileID: 117108093563426674, guid: ac2f6be86c081c84c80a30eecb91b8c8, type: 3}
   DomClaudioLocalDisparo: {fileID: 734529486}
