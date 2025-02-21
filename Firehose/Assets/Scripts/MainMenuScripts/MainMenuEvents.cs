@@ -227,7 +227,7 @@ public class MainMenuEvents : MonoBehaviour
     void StartGame()
     {
         Debug.Log("Iniciando o jogo...");
-        SceneManager.LoadScene("Fase1");
+        SceneManager.LoadScene("Fase1_Atualizada");
     }
 
     void OpenOptions()
