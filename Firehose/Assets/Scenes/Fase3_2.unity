@@ -8663,6 +8663,10 @@ PrefabInstance:
       value: Kerana
       objectReference: {fileID: 0}
     - target: {fileID: 5800714382861832103, guid: b1541f8177420484f8ce833af739283a, type: 3}
+      propertyPath: scene
+      value: Fase3_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800714382861832103, guid: b1541f8177420484f8ce833af739283a, type: 3}
       propertyPath: 'coracao.Array.data[0]'
       value: 
       objectReference: {fileID: 1139327858}
