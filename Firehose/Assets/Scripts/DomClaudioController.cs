@@ -5,11 +5,14 @@ public class DomClaudioController : MonoBehaviour
     public int vidas;
     public int vidaMax;
 
+    public float velocidadeClaudio;
+
     public GameObject DomClaudioFogo;
     public Transform DomClaudioLocalDisparo;
     public float tempoMaxEntreDisparos;
     public float tempoAtualDisparos;
 
+    private bool Cima = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,6 +25,7 @@ public class DomClaudioController : MonoBehaviour
     {
         HealthLogic();
         AtirarFogo();
+        Movimentar();
         DeadState();
     }
 
@@ -49,6 +53,27 @@ public class DomClaudioController : MonoBehaviour
         {
             Instantiate(DomClaudioFogo, DomClaudioLocalDisparo.position, Quaternion.Euler(0f, 0f, -90f));
             tempoAtualDisparos = tempoMaxEntreDisparos;
+        }
+    }
+    private void Movimentar()
+    {
+        float direcao;
+        if(Cima)
+        {
+            direcao = 1;
+        } 
+        else
+        {
+            direcao = -1;
+        }  
+        transform.Translate(Vector3.up * velocidadeClaudio * direcao * Time.deltaTime);
+        if (transform.position.y >= -26f)
+        {
+            Cima = false;
+        }
+        else if (transform.position.y <= -33f)
+        {
+            Cima = true;
         }
     }
 }

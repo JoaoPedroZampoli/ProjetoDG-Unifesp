@@ -207,7 +207,7 @@ Transform:
   m_GameObject: {fileID: 2394650}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 75.02, y: -30.91, z: -10}
+  m_LocalPosition: {x: 75.1, y: -33.19, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -532,7 +532,7 @@ Transform:
   m_GameObject: {fileID: 316784410}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 75.02, y: -30.91, z: -10}
+  m_LocalPosition: {x: 75.1, y: -33.19, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3395,6 +3395,26 @@ PrefabInstance:
       propertyPath: 'coracao.Array.data[4]'
       value: 
       objectReference: {fileID: 509056609}
+    - target: {fileID: 1675528718838692471, guid: b1541f8177420484f8ce833af739283a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.66766
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675528718838692471, guid: b1541f8177420484f8ce833af739283a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.66766
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675528718838692471, guid: b1541f8177420484f8ce833af739283a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.66766
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675528718838692471, guid: b1541f8177420484f8ce833af739283a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 75.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675528718838692471, guid: b1541f8177420484f8ce833af739283a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -33.19
+      objectReference: {fileID: 0}
     - target: {fileID: 3083847134246516312, guid: b1541f8177420484f8ce833af739283a, type: 3}
       propertyPath: fase
       value: 2
@@ -3403,6 +3423,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kerana
       objectReference: {fileID: 0}
+    - target: {fileID: 5800714382861832103, guid: b1541f8177420484f8ce833af739283a, type: 3}
+      propertyPath: 'coracao.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1897567413}
+    - target: {fileID: 5800714382861832103, guid: b1541f8177420484f8ce833af739283a, type: 3}
+      propertyPath: 'coracao.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1398605291}
+    - target: {fileID: 5800714382861832103, guid: b1541f8177420484f8ce833af739283a, type: 3}
+      propertyPath: 'coracao.Array.data[2]'
+      value: 
+      objectReference: {fileID: 502749727}
+    - target: {fileID: 5800714382861832103, guid: b1541f8177420484f8ce833af739283a, type: 3}
+      propertyPath: 'coracao.Array.data[3]'
+      value: 
+      objectReference: {fileID: 73288607}
+    - target: {fileID: 5800714382861832103, guid: b1541f8177420484f8ce833af739283a, type: 3}
+      propertyPath: 'coracao.Array.data[4]'
+      value: 
+      objectReference: {fileID: 509056609}
     - target: {fileID: 6476620201511700964, guid: b1541f8177420484f8ce833af739283a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.6684319
@@ -3462,7 +3502,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: b1541f8177420484f8ce833af739283a, type: 3}
 --- !u!4 &1045759935 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 6476620201511700964, guid: b1541f8177420484f8ce833af739283a, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1675528718838692471, guid: b1541f8177420484f8ce833af739283a, type: 3}
   m_PrefabInstance: {fileID: 1045759934}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1151811641
@@ -4479,7 +4519,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: -1009553219
