@@ -21,4 +21,13 @@ public class FogoDoMusgo : MonoBehaviour
         transform.Translate(Vector3.left * velocidadeDoFogo * Time.deltaTime);
         Destroy(gameObject, 1.0f);
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("Player"))
+        {
+            other.gameObject.GetComponent<HeartSystem>().vida--;
+            Destroy(this.gameObject);
+        }
+    }
 }
