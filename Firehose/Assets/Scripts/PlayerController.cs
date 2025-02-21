@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
 
     public DirecaoMovimento direcaoMovimento;
     public int fase;
+
+    public bool _isAttack = false;
     
     void Start()
     {
@@ -55,7 +57,11 @@ public class PlayerController : MonoBehaviour
         {
             _playerAnimator.SetInteger("Movimento", 0);
         }
-        // if ataque verdadeiro, movimento = 2
+        
+        if(_isAttack)
+        {
+            _playerAnimator.SetInteger("Movimento", 2);
+        }
 
         // novo (18/02)
         hit = Physics2D.BoxCast(transform.position, CapsuleCollider.size, 0, new Vector2(0, _playerDirection.y), Mathf.Abs(_playerDirection.y * Time.deltaTime), LayerMask.GetMask("Personagem","Blocking"));

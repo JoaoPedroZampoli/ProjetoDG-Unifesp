@@ -271,7 +271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fogoMusgo: {fileID: 7517420810173656173, guid: 1d710e8df97271740b82bbb89e805717, type: 3}
   localDisparo: {fileID: 1548582931972464771}
-  tempoMaxEntreDisparos: 1
+  tempoMaxEntreDisparos: 2
   tempoAtualDisparos: 0
 --- !u!114 &4481281684652972526
 MonoBehaviour:

@@ -24,7 +24,12 @@ public class AtaqueJogador : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            this.player._isAttack = true;
             Atacar();
+        }
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            this.player._isAttack = false;
         }
     }
 
@@ -80,7 +85,6 @@ public class AtaqueJogador : MonoBehaviour
                     inimigo.ReceberDano();
                 } 
             }
-            
         }
     }
 }
