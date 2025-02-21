@@ -18,7 +18,14 @@ public class FogoDoMusgo : MonoBehaviour
 
     private void MovimentarFogo()
     {
-        transform.Translate(Vector3.left * velocidadeDoFogo * Time.deltaTime);
+        if(this.gameObject.CompareTag("PoderClaudio"))
+        {
+            transform.Translate(Vector3.down * velocidadeDoFogo * Time.deltaTime);
+        }
+        else
+        {
+            transform.Translate(Vector3.left * velocidadeDoFogo * Time.deltaTime);
+        }
         Destroy(gameObject, 1.0f);
     }
 

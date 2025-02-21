@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
     public int fase;
 
     public bool _isAttack = false;
+
+    public GameObject _playerFogo;
+    public Transform _playerLocalDisparo;
     
     void Start()
     {
@@ -29,7 +32,10 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        
+        if(fase==3)
+        {
+            AtirarFogo();
+        }
     }
 
     void FixedUpdate()
@@ -80,5 +86,13 @@ public class PlayerController : MonoBehaviour
     void MovePlayer()
     {
         _playerRigidbody2D.MovePosition(_playerRigidbody2D.position + _playerDirection.normalized * _playerSpeed * Time.fixedDeltaTime);  
+    }
+
+    private void AtirarFogo()
+    {
+        if(Input.GetButtonDown("Fire1"))
+        {
+            Instantiate(_playerFogo, _playerLocalDisparo.position, _playerLocalDisparo.rotation);
+        }
     }
 }
