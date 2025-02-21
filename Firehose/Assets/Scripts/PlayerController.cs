@@ -50,6 +50,14 @@ public class PlayerController : MonoBehaviour
         {
             this.direcaoMovimento = DirecaoMovimento.Esquerda;
         }
+        if(_playerDirection.y > 0)
+        {
+            this.direcaoMovimento = DirecaoMovimento.Cima;
+        }
+        else if(_playerDirection.y < 0)
+        {
+            this.direcaoMovimento = DirecaoMovimento.Baixo;
+        }
     
         if(_playerDirection.sqrMagnitude > 0.1)
         {

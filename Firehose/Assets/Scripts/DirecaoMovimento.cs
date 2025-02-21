@@ -3,5 +3,7 @@ using UnityEngine;
 public enum DirecaoMovimento
 {
     Direita, 
-    Esquerda
+    Esquerda,
+    Cima,
+    Baixo
 }

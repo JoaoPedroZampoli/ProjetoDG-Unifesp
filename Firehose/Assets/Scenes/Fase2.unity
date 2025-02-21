@@ -119,6 +119,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &48829251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 48829252}
+  m_Layer: 9
+  m_Name: PontoAtaqueCima
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &48829252
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48829251}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.07, y: 0.85, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1852646335}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &138592286
 GameObject:
   m_ObjectHideFlags: 0
@@ -24132,6 +24163,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1852646335}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1514549422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1514549423}
+  m_Layer: 9
+  m_Name: PontoAtaqueBaixo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1514549423
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514549422}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.03, y: -1.27, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1852646335}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1538073020
 GameObject:
   m_ObjectHideFlags: 0
@@ -24751,6 +24813,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pontoAtaqueDireita: {fileID: 288784707}
   pontoAtaqueEsquerda: {fileID: 1463627221}
+  pontoAtaqueCima: {fileID: 48829252}
+  pontoAtaqueBaixo: {fileID: 1514549423}
   raioAtaque: 0.8
   layersAtaque:
     serializedVersion: 2
@@ -24816,6 +24880,8 @@ MonoBehaviour:
   direcaoMovimento: 0
   fase: 2
   _isAttack: 0
+  _playerFogo: {fileID: 0}
+  _playerLocalDisparo: {fileID: 0}
 --- !u!70 &1852646332
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -24950,6 +25016,8 @@ Transform:
   m_Children:
   - {fileID: 288784707}
   - {fileID: 1463627221}
+  - {fileID: 48829252}
+  - {fileID: 1514549423}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1866031995
@@ -25234,10 +25302,10 @@ SceneRoots:
   - {fileID: 911965628}
   - {fileID: 1852646335}
   - {fileID: 941265622}
-  - {fileID: 5162881889227576383}
   - {fileID: 1682052433}
   - {fileID: 1128947687}
   - {fileID: 177713156}
   - {fileID: 138592288}
+  - {fileID: 5162881889227576383}
   - {fileID: 367695364}
   - {fileID: 1361999595}

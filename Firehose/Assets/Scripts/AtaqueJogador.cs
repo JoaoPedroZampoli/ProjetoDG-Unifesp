@@ -10,6 +10,12 @@ public class AtaqueJogador : MonoBehaviour
     private Transform pontoAtaqueEsquerda;
 
     [SerializeField]
+    private Transform pontoAtaqueCima;
+
+    [SerializeField]
+    private Transform pontoAtaqueBaixo;
+
+    [SerializeField]
     private float raioAtaque;
 
     [SerializeField]
@@ -44,6 +50,14 @@ public class AtaqueJogador : MonoBehaviour
         {
             Gizmos.DrawWireSphere(this.pontoAtaqueEsquerda.position, this.raioAtaque);
         }
+        if(this.pontoAtaqueCima != null)
+        {
+            Gizmos.DrawWireSphere(this.pontoAtaqueCima.position, this.raioAtaque);
+        }
+        if(this.pontoAtaqueBaixo != null)
+        {
+            Gizmos.DrawWireSphere(this.pontoAtaqueBaixo.position, this.raioAtaque);
+        }
 
         //Destaca área usada no momento
         Transform pontoAtaque;
@@ -51,9 +65,17 @@ public class AtaqueJogador : MonoBehaviour
         {
             pontoAtaque = this.pontoAtaqueDireita;
         }
-        else
+        else if(this.player.direcaoMovimento == DirecaoMovimento.Esquerda)
         {
             pontoAtaque = this.pontoAtaqueEsquerda;
+        }
+        else if(this.player.direcaoMovimento == DirecaoMovimento.Cima)
+        {
+            pontoAtaque = this.pontoAtaqueCima;
+        }
+        else
+        {
+            pontoAtaque = this.pontoAtaqueBaixo;
         }
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(pontoAtaque.position, this.raioAtaque);
@@ -66,9 +88,17 @@ public class AtaqueJogador : MonoBehaviour
         {
             pontoAtaque = this.pontoAtaqueDireita;
         }
-        else
+        else if(this.player.direcaoMovimento == DirecaoMovimento.Esquerda)
         {
             pontoAtaque = this.pontoAtaqueEsquerda;
+        }
+        else if(this.player.direcaoMovimento == DirecaoMovimento.Cima)
+        {
+            pontoAtaque = this.pontoAtaqueCima;
+        }
+        else
+        {
+            pontoAtaque = this.pontoAtaqueBaixo;
         }
 
         Collider2D[] collidersInimigo = Physics2D.OverlapCircleAll(pontoAtaque.position, this.raioAtaque, this.layersAtaque);
