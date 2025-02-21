@@ -24700,6 +24700,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerSpeed: 5
   direcaoMovimento: 0
+  fase: 2
 --- !u!70 &1852646332
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

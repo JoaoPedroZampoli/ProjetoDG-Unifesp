@@ -13,11 +13,13 @@ public class PlayerController : MonoBehaviour
     private RaycastHit2D hit;
 
     public DirecaoMovimento direcaoMovimento;
+    public int fase;
     
     void Start()
     {
         _playerRigidbody2D = GetComponent<Rigidbody2D>();
         _playerAnimator = GetComponent<Animator>();
+        _playerAnimator.SetInteger("Fase", fase);
         CapsuleCollider = GetComponent<CapsuleCollider2D>();
 
         this.direcaoMovimento = DirecaoMovimento.Direita;
