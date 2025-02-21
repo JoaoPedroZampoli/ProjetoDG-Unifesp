@@ -25305,6 +25305,10 @@ PrefabInstance:
       propertyPath: 'coracao.Array.data[4]'
       value: 
       objectReference: {fileID: 1612351329}
+    - target: {fileID: 7937770406144915173, guid: b1541f8177420484f8ce833af739283a, type: 3}
+      propertyPath: fase
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8883455175235664376, guid: b1541f8177420484f8ce833af739283a, type: 3}
       propertyPath: m_Name
       value: Kerana

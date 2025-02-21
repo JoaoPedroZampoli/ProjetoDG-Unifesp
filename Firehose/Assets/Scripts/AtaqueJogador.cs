@@ -24,6 +24,8 @@ public class AtaqueJogador : MonoBehaviour
     [SerializeField]
     private PlayerController player;
 
+    public int fase;
+
 
     // Update is called once per frame
     void Update()
@@ -84,7 +86,10 @@ public class AtaqueJogador : MonoBehaviour
     private void Atacar()
     {
         Transform pontoAtaque;
-        AudioController.current.PlayMusic(AudioController.current.Lanca);
+        if (fase != 0)
+        {
+            AudioController.current.PlayMusic(AudioController.current.Lanca);
+        }
         if (this.player.direcaoMovimento == DirecaoMovimento.Direita)
         {
             pontoAtaque = this.pontoAtaqueDireita;
