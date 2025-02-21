@@ -84,7 +84,6 @@ public class AtaqueJogador : MonoBehaviour
     private void Atacar()
     {
         Transform pontoAtaque;
-        AudioController.current.PlayMusic(AudioController.current.Lanca);
         if(this.player.direcaoMovimento == DirecaoMovimento.Direita)
         {
             pontoAtaque = this.pontoAtaqueDireita;
