@@ -8538,7 +8538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9adf58e5ee33bbc428f7c4f5d33e4a39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidas: 5
+  vidas: 7
   vidaMax: 15
   velocidadeClaudio: 3
   DomClaudioFogo: {fileID: 117108093563426674, guid: ac2f6be86c081c84c80a30eecb91b8c8, type: 3}
