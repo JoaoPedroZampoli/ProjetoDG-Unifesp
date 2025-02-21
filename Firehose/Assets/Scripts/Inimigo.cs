@@ -17,9 +17,7 @@ public class Inimigo : MonoBehaviour
         if(this.vidas==0)
         {
             //Derrotado
-            if(this.gameObject.tag=="Mosquinha"){
-                this.animator.SetBool("Morte", true);
-            }
+            this.animator.SetBool("Morte", true);
             GameObject.Destroy(this.gameObject, 0.6f);
             onDeathCallback?.Invoke();
         }
